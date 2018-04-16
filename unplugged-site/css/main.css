@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -20,9 +20,7 @@ html {
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
+ * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
 
@@ -97,10 +95,67 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Header =========================== */
+  .main-header {
+    width: 100%;
+  }
 
+  nav {
+    width: 100%;
+  }
 
+/* Main Content =========================== */
+  main {
+    width: 96%;
+    padding: 0 2%;
+    margin: auto;
+    clear: both;
+  }
 
+/* Featured News Item =========================== */
 
+.top-story {
+    width: 100%;
+}
+
+/* Side Bar =========================== */
+
+.sidebar {
+    width: 100%;
+
+}
+
+.sidebar-about-us,
+.sidebar-faqs {
+    display: none;
+}
+
+/* Feed Section =========================== */
+
+.feed {
+    width: 100%;
+}
+
+.feed-img {
+    width: 45%;
+}
+
+/* ABOUT PAGE ================================ */
+
+.contact-info{
+    width: 100%;
+}
+
+/* Footer =========================== */
+footer {
+  width: 100%;
+  margin: auto;
+}
+
+.footer-logo {
+  width: 47.5%;
+  margin: auto;
+}
 
 
 
@@ -127,26 +182,26 @@ textarea {
 
 /*
  * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  *
  * 1. For long content, line feeds are not interpreted as spaces and small width
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
-}
+ .visuallyhidden {
+     border: 0;
+     clip: rect(0 0 0 0);
+     -webkit-clip-path: inset(50%);
+     clip-path: inset(50%);
+     height: 1px;
+     margin: -1px;
+     overflow: hidden;
+     padding: 0;
+     position: absolute;
+     width: 1px;
+     white-space: nowrap; /* 1 */
+ }
 
 /*
  * Extends the .visuallyhidden class to allow the element
@@ -154,18 +209,18 @@ textarea {
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
-}
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+     clip: auto;
+     -webkit-clip-path: none;
+     clip-path: none;
+     height: auto;
+     margin: 0;
+     overflow: visible;
+     position: static;
+     width: auto;
+     white-space: inherit;
+ }
 
 /*
  * Hide visually and from screen readers, but maintain layout
@@ -203,15 +258,137 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width:768px) {
+   /*Tablet styles here*/
+
+   /* Header ----------------- */
+   .main-header {
+       width: 100%;
+       margin: auto;
+       padding: 0 3%;
+   }
+
+   .main-header .header-wrapper {
+       width: 94%;
+       max-width: 960px;
+       margin: 0 auto;
+   }
+
+   .logo {
+       width: 40%;
+       float: left;
+   }
+
+   nav {
+       width: 60%;
+       float: left;
+   }
+
+   /* Featured News Item --------- */
+   .top-story{
+       width: 100%;
+       clear: both;
+   }
+
+   .top-img {
+       width: 57%;
+       float: left;
+       padding-right: 3%;
+   }
+
+   .top-info {
+       width: 40%;
+       float: left;
+   }
+
+   /* Side bar ---------------- */
+   .sidebar {
+       clear: both;
+       width: 37%;
+       float: right;
+   }
+
+   .sidebar-about-us, .sidebar-faqs{
+       display: block;
+   }
+
+   /* News Feed Section ----------------- */
+    .feed {
+      width: 60%;
+      float: left;
+    }
+
+    .feed-img {
+      width: 35%;
+    }
+
+    .feed-info {
+      width: 57%;
+    }
+
+    /* ABOUT PAGE ---------------------- */
+    .contact-info {
+      width: 40%;
+      float: left;
+    }
+
+    /* Footer ------------------------*/
+    .footer-logo {
+        width: 30%;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (min-width:940px) {
+  /*desktop styles here */
+
+  /*featured news item ----------- */
+  .top-story{
+      width: 65%;
+      float: left;
+  }
+
+  .top-img{
+      width: 100%;
+  }
+
+  /* side bar ------------------ */
+  .sidebar{
+      clear: none;
+      width: 30%;
+      float: right;
+  }
+
+  /* News/Reviews Feed Section --------------- */
+  .feed {
+      width: 100%;
+      float: none;
+      clear: both;
+  }
+
+  .feed p{
+      display: block;
+      margin-top: 0;
+  }
+
+  .feed-img{
+      width: 20%;
+  }
+
+  /* Footer ----------------- */
+
+  .footer-logo {
+      width: 20%;
+  }
+
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+   (-webkit-min-device-pixel-ratio: 1.25),
+   (min-resolution: 1.25dppx),
+   (min-resolution: 120dpi) {
+/* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
@@ -223,7 +400,9 @@ textarea {
 @media print {
     *,
     *:before,
-    *:after {
+    *:after,
+    *:first-letter,
+    *:first-line {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
@@ -254,9 +433,6 @@ textarea {
         content: "";
     }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
     pre,
     blockquote {
         border: 1px solid #999;
@@ -275,6 +451,10 @@ textarea {
     tr,
     img {
         page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
     }
 
     p,
